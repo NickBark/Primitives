@@ -10,6 +10,8 @@ class Point {
     void setX(double x);
     void setY(double y);
 
+    void ppp() const {}
+
   private:
     double x;
     double y;

@@ -12,11 +12,16 @@ class Paint : public QFrame {
 
     int flag;
 
+    // Line
+    TopLine* line;
+    TopLine* circle;
+
   protected:
     void paintEvent(QPaintEvent* event);
     void drawLine(QPainter* pp);
     void drawCircle(QPainter* pp);
     void drawRectangle(QPainter* pp);
+    void drawTriangle(QPainter* pp);
 
   signals:
 };

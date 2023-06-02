@@ -1,9 +1,17 @@
 #include "paint.h"
 
-Paint::Paint(QFrame* parent) : QFrame{parent} { flag = -1; }
+Paint::Paint(QFrame* parent) : QFrame{parent} {
+    line = new TopLine();
+    circle = new TopLine();
+    flag = -1;
+}
 
 void Paint::paintEvent(QPaintEvent* event) {
     QPainter p(this);
+    //    drawLine(&p);
+    //    drawCircle(&p);
+    //    drawRectangle(&p);
+
     if (flag == LINE) {
         drawLine(&p);
         flag = -1;
@@ -17,15 +25,22 @@ void Paint::paintEvent(QPaintEvent* event) {
 }
 
 void Paint::drawLine(QPainter* pp) {
-    TopLine line;
-    line.setLine(Point(50, 50), Point(100, 100));
-    pp->drawLine(line.setP1().getX(), line.setP1().getY(), line.setP2().getX(),
-                 line.setP2().getY());
+    pp->drawLine(line->setP1().getX(), line->setP1().getY(),
+                 line->setP2().getX(), line->setP2().getY());
 }
 
 void Paint::drawCircle(QPainter* pp) {
-    pp->drawEllipse(100, 100, 50, 50);
+
+    pp->drawEllipse(circle->setP1().getX(), circle->setP1().getY(),
+                    circle->setP2().getX(), circle->setP2().getY());
+}
+
+void Paint::drawRectangle(QPainter* pp) {
+    pp->drawRect(100, 150, 50, 100);
     ;
 }
 
-void Paint::drawRectangle(QPainter* pp) { pp->drawRect(100, 150, 50, 100); }
+void Paint::drawTriangle(QPainter* pp) {
+    ;
+    ;
+}

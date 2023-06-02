@@ -19,12 +19,27 @@ class MainWindow : public QMainWindow {
     void Connector();
 
     QFrame* qfCentral;
-    QVBoxLayout* hbl;
+    QVBoxLayout* vbl;
     Paint* paint;
-    QGridLayout* gl;
+    QHBoxLayout* hbl;
     QPushButton* pbLine;
+    QGridLayout* glLine;
+    QLineEdit* leLineX1;
+    QLineEdit* leLineY1;
+    QLineEdit* leLineX2;
+    QLineEdit* leLineY2;
     QPushButton* pbCircle;
+    QGridLayout* glCircle;
+    QLineEdit* leCircleX;
+    QLineEdit* leCircleY;
+    QLineEdit* leCircleW;
+    QLineEdit* leCircleH;
     QPushButton* pbRectangle;
+    QGridLayout* glRect;
+    QLineEdit* leRectX1;
+    QLineEdit* leRectY1;
+    QLineEdit* leRectX2;
+    QLineEdit* leRectY2;
 
   private slots:
     void slotPbLine();
