@@ -40,10 +40,21 @@ class MainWindow : public QMainWindow {
     QLineEdit* leRectY1;
     QLineEdit* leRectX2;
     QLineEdit* leRectY2;
+    QPushButton* pbTri;
+    QGridLayout* glTri;
+    QLineEdit* leTriX1;
+    QLineEdit* leTriY1;
+    QLineEdit* leTriX2;
+    QLineEdit* leTriY2;
+    QLineEdit* leTriX3;
+    QLineEdit* leTriY3;
+    QPushButton* pbClear;
 
   private slots:
     void slotPbLine();
     void slotPbCircle();
     void slotPbRectangle();
+    void slotPbTriangle();
+    void slotPbClear();
 };
 #endif // MAINWINDOW_H

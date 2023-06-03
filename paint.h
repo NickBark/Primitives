@@ -2,8 +2,10 @@
 #define PAINT_H
 
 #include "dependencies.h"
+#include "topcircle.h"
 #include "topline.h"
-#include <QFrame>
+#include "toprectangle.h"
+#include "toptriangle.h"
 
 class Paint : public QFrame {
     Q_OBJECT
@@ -12,9 +14,15 @@ class Paint : public QFrame {
 
     int flag;
 
-    // Line
-    TopLine* line;
-    TopLine* circle;
+    vector<TopCircle> vCirc;
+    vector<TopLine> vLine;
+    vector<TopRectangle> vRect;
+    vector<TopTriangle> vTri;
+
+    //    TopLine* line;
+    //    TopCircle* circle;
+    //    TopRectangle* rect;
+    //    TopTriangle* tri;
 
   protected:
     void paintEvent(QPaintEvent* event);

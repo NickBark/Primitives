@@ -13,10 +13,10 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-#include <iostream>
+#include <vector>
 
 using namespace std;
 
-enum flags { LINE, CIRCLE, RECT };
+enum flags { LINE, CIRCLE, RECT, TRI };
 
 #endif // DEPENDENCIES_H
