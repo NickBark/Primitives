@@ -19,11 +19,6 @@ class Paint : public QFrame {
     vector<TopRectangle> vRect;
     vector<TopTriangle> vTri;
 
-    //    TopLine* line;
-    //    TopCircle* circle;
-    //    TopRectangle* rect;
-    //    TopTriangle* tri;
-
   protected:
     void paintEvent(QPaintEvent* event);
     void drawLine(QPainter* pp);

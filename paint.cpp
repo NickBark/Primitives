@@ -9,24 +9,6 @@ void Paint::paintEvent(QPaintEvent* event) {
     drawCircle(&p);
     drawRectangle(&p);
     drawTriangle(&p);
-
-    //    if (flag == LINE) {
-    //        qDebug() << "draw Line";
-    //        drawLine(&p);
-    //        flag = -1;
-    //    } else if (flag == CIRCLE) {
-    //        qDebug() << "draw Circle";
-    //        drawCircle(&p);
-    //        flag = -1;
-    //    } else if (flag == RECT) {
-    //        qDebug() << "draw Rect";
-    //        drawRectangle(&p);
-    //        flag = -1;
-    //    } else if (flag == TRI) {
-    //        qDebug() << "draw Triangle";
-    //        drawTriangle(&p);
-    //        flag = -1;
-    //    }
 }
 
 void Paint::drawLine(QPainter* pp) {
